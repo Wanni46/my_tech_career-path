@@ -110,28 +110,6 @@ To leverage my technical expertise in AI/ML and cloud technologies to solve comp
 
 ---
 
-## 💻 Active Projects
-
-| Project | Description | Technologies | Status | Link |
-|---------|-------------|--------------|--------|------|
-| Memory System Simulator | Hardware simulation tool modeling memory access patterns | C++, Python | Complete | [GitHub](https://github.com/Wanni46/Memory-System-Simulator) |
-| IoT Edge-Fog-Cloud System | Distributed architecture for IoT data processing | Python, Docker, AWS | In Progress | [GitHub](https://github.com/Wanni46/IOT-EDGE-FOG-CLOUD-SYSTEM) |
-| Tech Career Roadmap | Personal career planning and tracking | HTML/CSS, JavaScript | Active | [GitHub](https://github.com/Wanni46/my_tech_career-path) |
-| Personal Portfolio | Professional profile and showcase | Coming Soon | Planning | - |
-
-<div align="center">
-  <a href="https://github.com/Wanni46/Memory-System-Simulator">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Wanni46&repo=Memory-System-Simulator&theme=tokyonight" />
-  </a>
-  <a href="https://github.com/Wanni46/IOT-EDGE-FOG-CLOUD-SYSTEM">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Wanni46&repo=IOT-EDGE-FOG-CLOUD-SYSTEM&theme=tokyonight" />
-  </a>
-</div>
-
-<p align="right"><a href="#-quick-navigation">⬆️ Back to Navigation</a></p>
-
----
-
 ## 🧠 Skills Development
 
 ### Current Focus Areas
