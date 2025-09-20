@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Career Roadmap 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        .roadmap {
+            padding: 40px;
+        }
+
+        .year-section {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .year-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .year-badge {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 16px rgba(79, 172, 254, 0.3);
+            min-width: 160px;
+            text-align: center;
+        }
+
+        .year-title {
+            margin-left: 20px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-left: 180px;
+        }
+
+        .goal-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #ff6b6b;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .goal-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .goal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .goal-card h3 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .goal-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+
+        .goal-card a {
+            color: #667eea !important;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .goal-card a:hover {
+            border-bottom-color: #667eea;
+            color: #4a5cf0 !important;
+        }
+
+        /* Different colors for each year */
+        .year-2025 .year-badge {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+        }
+        
+        .year-2025 .goal-card {
+            border-left-color: #ff6b6b;
+        }
+
+        .year-2026 .year-badge {
+            background: linear-gradient(135deg, #feca57, #ff9ff3);
+        }
+        
+        .year-2026 .goal-card {
+            border-left-color: #feca57;
+        }
+
+        .year-2027 .year-badge {
+            background: linear-gradient(135deg, #48dbfb, #0abde3);
+        }
+        
+        .year-2027 .goal-card {
+            border-left-color: #48dbfb;
+        }
+
+        .year-2028 .year-badge {
+            background: linear-gradient(135deg, #1dd1a1, #10ac84);
+        }
+        
+        .year-2028 .goal-card {
+            border-left-color: #1dd1a1;
+        }
+
+        .timeline-connector {
+            position: absolute;
+            left: 80px;
+            top: 100px;
+            bottom: -40px;
+            width: 3px;
+            background: linear-gradient(180deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+            border-radius: 2px;
+            z-index: -1;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .footer h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+            width: 25%;
+            border-radius: 4px;
+            animation: progress 3s ease-in-out;
+        }
+
+        @keyframes progress {
+            0% { width: 0%; }
+            100% { width: 25%; }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .goals-grid {
+                margin-left: 0;
+                grid-template-columns: 1fr;
+            }
+            
+            .year-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .year-title {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            
+            .timeline-connector {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 My Tech Career Roadmap</h1>
+            <h2 style="font-size: 1.5rem; margin: 10px 0; opacity: 0.95; font-weight: 500;">Pasindu Dhananjaya Wanninayake</h2>
+            <p>Journey to AI/ML Excellence | Sri Lanka to Global Markets</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <div class="roadmap">
+            <div class="timeline-connector"></div>
+            
+            <!-- Year 2025 -->
+            <div class="year-section year-2025">
+                <div class="year-header">
+                    <div class="year-badge">Year 2025</div>
+                    <div class="year-title">Foundation Phase</div>
+                </div>
+                <div class="goals-grid">
+                    <div class="goal-card">
+                        <h3><span class="goal-icon">📚</span>Master Program</h3>
+                        <p>Start the Developers-stack Master Program to build comprehensive technical skills and gain industry-relevant knowledge.</p>
+                    </div>
+                    <div class="goal-card">
+                        <h3><span class="goal-icon">💼</span>Portfolio Building</h3>
+                        <p>Create impressive portfolio projects showcasing diverse technical skills and problem-solving abilities.</p>
+                    </div>
+                    <div class="goal-card">
+                        <h3><span class="goal-icon">🌟</span>Open Source</h3>
+                        <p>Actively contribute to open-source projects on GitHub to build community presence and collaboration skills.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Year 2026 -->
+            <div class="year-section year-2026">
+                <div class="year-header">
+                    <div class="year-badge">Year 2026</div>
+                    <div class="year-title">Specialization Phase</div>
+                </div>
+                <div class="goals-grid">
+                    <div class="goal-card">
+                        <h3><span class="goal-icon">☁️</span>Cloud Certifications</h3>
+                        <p>Achieve AWS Associate and Azure Fundamentals certifications to establish cloud computing expertise.</p>
+                    </div>
+                    <div class="goal-card">
+                        <h3><span class="goal-icon">🤖</span>AI/ML Foundations</h3>
+                        <p>Explore AI/ML basics and build foundational knowledge in machine learning algorithms and applications.</p>
+                    </div>
+                    <div class="goal-card">
+                        <h3><span class="goal-icon">💰</span>Professional Experience</h3>
+                        <p>Secure internship or freelance projects to gain real-world experience and build professional network.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Year 2027 -->
+            <div class="year-section year-2027">
+                <div class="year-header">
+                    <div class="year-badge">Year 2027</div>
+                    <div class="year-title">Professional Growth</div>
+                </div>
+                <div class="goals-grid">
+                    <div class="goal-card">
+                        <h3><span class="goal-icon">🏢</span>Mid-Level Roles</h3>
+                        <p>Apply for mid-level software roles in Sri Lanka's thriving IT sector and establish professional career.</p>
+                    </div>
+                    <div class="goal-card">
+                        <h3><span class="goal-icon">📖</span>Research Publication</h3>
+                        <p>Publish research or showcase significant work in AI field to build thought leadership and credibility.</p>
+                    </div>
+                    <div class="goal-card">
+                        <h3><span class="goal-icon">🎓</span>BSc Completion</h3>
+                        <p>Complete BSc Hons in Computer Engineering to solidify academic foundation and technical knowledge.</p>
+                    </div>
+                    <div class="goal-card">
+                        <h3><span class="goal-icon">✈️</span>Migration Prep</h3>
+                        <p>Prepare comprehensive migration pathways targeting opportunities in Europe or Australia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Year 2028+ -->
+            <div class="year-section year-2028">
+                <div class="year-header">
+                    <div class="year-badge">Year 2028+</div>
+                    <div class="year-title">Global Expansion</div>
+                </div>
+                <div class="goals-grid">
+                    <div class="goal-card">
+                        <h3><span class="goal-icon">🎯</span>Senior Roles</h3>
+                        <p>Transition into AI/ML Engineer or Cloud Solutions Architect positions with advanced responsibilities.</p>
+                    </div>
+                    <div class="goal-card">
+                        <h3><span class="goal-icon">🌍</span>International Markets</h3>
+                        <p>Target and secure positions in international job markets, expanding career globally.</p>
+                    </div>
+                    <div class="goal-card">
+                        <h3><span class="goal-icon">🔬</span>AXSYNTHE Focus</span></h3>
+                        <p>Build long-term career under <a href="https://axsynthegroup.me/" target="_blank" style="color: #667eea; text-decoration: none; font-weight: 600; border-bottom: 2px solid transparent; transition: border-color 0.3s ease;">AXSYNTHE</a>, focusing on cutting-edge AI-driven solutions and innovation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3>🎯 Vision Statement</h3>
+            <p>Transforming from a foundation learner to a global AI/ML leader, contributing to innovative solutions that shape the future of technology.</p>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling and animation effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.goal-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
